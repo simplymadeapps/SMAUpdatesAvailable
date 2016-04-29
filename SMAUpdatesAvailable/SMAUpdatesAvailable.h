@@ -16,10 +16,13 @@ typedef NS_ENUM(NSUInteger, SMAVersionType) {
     SMAVersionTypeMajorMinorBug = 3
 };
 
-typedef void (^SMAUpdateCompletionBlock)(SMAUpdateResponse *response);
+typedef void (^SMAUpdateCompletionBlock)(SMAUpdateResponse * _Nonnull response);
 
 @interface SMAUpdatesAvailable : NSObject
 
-+ (void)checkForUpdatesWithType:(SMAVersionType)type onCompletion:(SMAUpdateCompletionBlock)completionBlock;
++ (void)checkForUpdatesWithType:(SMAVersionType)type onCompletion:(SMAUpdateCompletionBlock _Nullable)completionBlock;
+- (void)checkForUpdatesWithType:(SMAVersionType)type onCompletion:(SMAUpdateCompletionBlock _Nullable)completionBlock;
+- (BOOL)updateAvailableForCurrentVersion:(nullable NSString *)appVersion andAppStoreVersion:(nullable NSString *)appStoreVersion withType:(SMAVersionType)type;
+- (nullable NSString *)cleanupString:(nonnull NSString *)string forType:(SMAVersionType)type;
 
 @end

@@ -75,8 +75,8 @@ NSString * const lookupURL = @"http://itunes.apple.com/lookup";
         return NO;
     }
     
-    appVersion = [self cleanupString:appVersion ForType:type];
-    appStoreVersion = [self cleanupString:appStoreVersion ForType:type];
+    appVersion = [self cleanupString:appVersion forType:type];
+    appStoreVersion = [self cleanupString:appStoreVersion forType:type];
     
     if ([appStoreVersion compare:appVersion options:NSNumericSearch] == NSOrderedDescending) {
         return YES; // version is less than app store version
@@ -85,16 +85,13 @@ NSString * const lookupURL = @"http://itunes.apple.com/lookup";
     }
 }
 
-- (NSString *)cleanupString:(nonnull NSString *)string ForType:(SMAVersionType)type {
-    if (!type || type == SMAVersionTypeDefault || !string) {
+- (NSString *)cleanupString:(nonnull NSString *)string forType:(SMAVersionType)type {
+    if (!string || string.length == 0) {
         return string;
     }
     
     NSString *returnString;
     NSArray *comps = [string componentsSeparatedByString:@"."];
-    if (!comps) {
-        return string;
-    }
     
     switch (type) {
         case SMAVersionTypeMajor: {
@@ -120,10 +117,9 @@ NSString * const lookupURL = @"http://itunes.apple.com/lookup";
             break;
         }
         case SMAVersionTypeDefault:
-        default: {
+        default:
             returnString = string;
             break;
-        }
     }
     
     return returnString;
