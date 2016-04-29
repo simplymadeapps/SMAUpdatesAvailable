@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA4B374F1CD3BCB0002FBE4D /* SMAUpdatesAvailable_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B374E1CD3BCB0002FBE4D /* SMAUpdatesAvailable_Tests.m */; };
 		BA4B37581CD3BCF7002FBE4D /* SMAUpdatesAvailable.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B37551CD3BCF7002FBE4D /* SMAUpdatesAvailable.m */; };
 		BA4B37591CD3BCF7002FBE4D /* SMAUpdateResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B37571CD3BCF7002FBE4D /* SMAUpdateResponse.m */; };
+		BA4B375B1CD3BF23002FBE4D /* SMAUpdateResponseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B375A1CD3BF23002FBE4D /* SMAUpdateResponseTests.m */; };
+		BA4B375D1CD3BF6F002FBE4D /* SMAUpdatesAvailableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B375C1CD3BF6F002FBE4D /* SMAUpdatesAvailableTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BA4B374B1CD3BCB0002FBE4D /* SMAUpdatesAvailable-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMAUpdatesAvailable-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA4B374E1CD3BCB0002FBE4D /* SMAUpdatesAvailable_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAUpdatesAvailable_Tests.m; sourceTree = "<group>"; };
 		BA4B37501CD3BCB0002FBE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA4B37541CD3BCF7002FBE4D /* SMAUpdatesAvailable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAUpdatesAvailable.h; path = SMAUpdatesAvailable/SMAUpdatesAvailable.h; sourceTree = "<group>"; };
 		BA4B37551CD3BCF7002FBE4D /* SMAUpdatesAvailable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAUpdatesAvailable.m; path = SMAUpdatesAvailable/SMAUpdatesAvailable.m; sourceTree = "<group>"; };
 		BA4B37561CD3BCF7002FBE4D /* SMAUpdateResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAUpdateResponse.h; path = SMAUpdatesAvailable/SMAUpdateResponse.h; sourceTree = "<group>"; };
 		BA4B37571CD3BCF7002FBE4D /* SMAUpdateResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAUpdateResponse.m; path = SMAUpdatesAvailable/SMAUpdateResponse.m; sourceTree = "<group>"; };
+		BA4B375A1CD3BF23002FBE4D /* SMAUpdateResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAUpdateResponseTests.m; sourceTree = "<group>"; };
+		BA4B375C1CD3BF6F002FBE4D /* SMAUpdatesAvailableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAUpdatesAvailableTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +66,9 @@
 		BA4B374D1CD3BCB0002FBE4D /* SMAUpdatesAvailable-Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BA4B374E1CD3BCB0002FBE4D /* SMAUpdatesAvailable_Tests.m */,
 				BA4B37501CD3BCB0002FBE4D /* Info.plist */,
+				BA4B375C1CD3BF6F002FBE4D /* SMAUpdatesAvailableTests.m */,
+				BA4B375A1CD3BF23002FBE4D /* SMAUpdateResponseTests.m */,
 			);
 			path = "SMAUpdatesAvailable-Tests";
 			sourceTree = "<group>";
@@ -135,9 +138,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4B375D1CD3BF6F002FBE4D /* SMAUpdatesAvailableTests.m in Sources */,
 				BA4B37581CD3BCF7002FBE4D /* SMAUpdatesAvailable.m in Sources */,
+				BA4B375B1CD3BF23002FBE4D /* SMAUpdateResponseTests.m in Sources */,
 				BA4B37591CD3BCF7002FBE4D /* SMAUpdateResponse.m in Sources */,
-				BA4B374F1CD3BCB0002FBE4D /* SMAUpdatesAvailable_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

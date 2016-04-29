@@ -1,6 +1,6 @@
 //
-//  SMAUpdatesAvailable_Tests.m
-//  SMAUpdatesAvailable-Tests
+//  SMAUpdatesAvailableTests.m
+//  SMAUpdatesAvailable
 //
 //  Created by Bill Burgess on 4/29/16.
 //
@@ -9,11 +9,11 @@
 #import <XCTest/XCTest.h>
 #import "SMAUpdatesAvailable.h"
 
-@interface SMAUpdatesAvailable_Tests : XCTestCase
+@interface SMAUpdatesAvailableTests : XCTestCase
 
 @end
 
-@implementation SMAUpdatesAvailable_Tests
+@implementation SMAUpdatesAvailableTests
 
 - (void)setUp {
     [super setUp];
@@ -25,9 +25,9 @@
     [super tearDown];
 }
 
-- (void)testObjectInit {
-    SMAUpdatesAvailable *ua = [[SMAUpdatesAvailable alloc] init];
-    XCTAssertNotNil(ua, @"Object should not be nil");
+- (void)testObjectInitNotNil {
+    SMAUpdatesAvailable *update = [[SMAUpdatesAvailable alloc] init];
+    XCTAssertNotNil(update);
 }
 
 @end
