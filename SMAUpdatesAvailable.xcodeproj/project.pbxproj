@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA4B374F1CD3BCB0002FBE4D /* SMAUpdatesAvailable_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B374E1CD3BCB0002FBE4D /* SMAUpdatesAvailable_Tests.m */; };
+		BA4B37581CD3BCF7002FBE4D /* SMAUpdatesAvailable.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B37551CD3BCF7002FBE4D /* SMAUpdatesAvailable.m */; };
+		BA4B37591CD3BCF7002FBE4D /* SMAUpdateResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4B37571CD3BCF7002FBE4D /* SMAUpdateResponse.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BA4B374B1CD3BCB0002FBE4D /* SMAUpdatesAvailable-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMAUpdatesAvailable-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4B374E1CD3BCB0002FBE4D /* SMAUpdatesAvailable_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAUpdatesAvailable_Tests.m; sourceTree = "<group>"; };
+		BA4B37501CD3BCB0002FBE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4B37541CD3BCF7002FBE4D /* SMAUpdatesAvailable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAUpdatesAvailable.h; sourceTree = "<group>"; };
+		BA4B37551CD3BCF7002FBE4D /* SMAUpdatesAvailable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAUpdatesAvailable.m; sourceTree = "<group>"; };
+		BA4B37561CD3BCF7002FBE4D /* SMAUpdateResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAUpdateResponse.h; sourceTree = "<group>"; };
+		BA4B37571CD3BCF7002FBE4D /* SMAUpdateResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAUpdateResponse.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA4B37481CD3BCB0002FBE4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA4B373F1CD3BC71002FBE4D = {
+			isa = PBXGroup;
+			children = (
+				BA4B37461CD3BC7E002FBE4D /* SMAUpdatesAvailable */,
+				BA4B374D1CD3BCB0002FBE4D /* SMAUpdatesAvailable-Tests */,
+				BA4B374C1CD3BCB0002FBE4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA4B37461CD3BC7E002FBE4D /* SMAUpdatesAvailable */ = {
+			isa = PBXGroup;
+			children = (
+				BA4B37541CD3BCF7002FBE4D /* SMAUpdatesAvailable.h */,
+				BA4B37551CD3BCF7002FBE4D /* SMAUpdatesAvailable.m */,
+				BA4B37561CD3BCF7002FBE4D /* SMAUpdateResponse.h */,
+				BA4B37571CD3BCF7002FBE4D /* SMAUpdateResponse.m */,
+			);
+			name = SMAUpdatesAvailable;
+			sourceTree = "<group>";
+		};
+		BA4B374C1CD3BCB0002FBE4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA4B374B1CD3BCB0002FBE4D /* SMAUpdatesAvailable-Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA4B374D1CD3BCB0002FBE4D /* SMAUpdatesAvailable-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BA4B374E1CD3BCB0002FBE4D /* SMAUpdatesAvailable_Tests.m */,
+				BA4B37501CD3BCB0002FBE4D /* Info.plist */,
+			);
+			path = "SMAUpdatesAvailable-Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA4B374A1CD3BCB0002FBE4D /* SMAUpdatesAvailable-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA4B37511CD3BCB0002FBE4D /* Build configuration list for PBXNativeTarget "SMAUpdatesAvailable-Tests" */;
+			buildPhases = (
+				BA4B37471CD3BCB0002FBE4D /* Sources */,
+				BA4B37481CD3BCB0002FBE4D /* Frameworks */,
+				BA4B37491CD3BCB0002FBE4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SMAUpdatesAvailable-Tests";
+			productName = "SMAUpdatesAvailable-Tests";
+			productReference = BA4B374B1CD3BCB0002FBE4D /* SMAUpdatesAvailable-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA4B37401CD3BC71002FBE4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				TargetAttributes = {
+					BA4B374A1CD3BCB0002FBE4D = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = BA4B37431CD3BC71002FBE4D /* Build configuration list for PBXProject "SMAUpdatesAvailable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BA4B373F1CD3BC71002FBE4D;
+			productRefGroup = BA4B374C1CD3BCB0002FBE4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA4B374A1CD3BCB0002FBE4D /* SMAUpdatesAvailable-Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA4B37491CD3BCB0002FBE4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA4B37471CD3BCB0002FBE4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4B37581CD3BCF7002FBE4D /* SMAUpdatesAvailable.m in Sources */,
+				BA4B37591CD3BCF7002FBE4D /* SMAUpdateResponse.m in Sources */,
+				BA4B374F1CD3BCB0002FBE4D /* SMAUpdatesAvailable_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BA4B37441CD3BC71002FBE4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		BA4B37451CD3BC71002FBE4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		BA4B37521CD3BCB0002FBE4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SMAUpdatesAvailable-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simplymadeapps.ios.updates-available.SMAUpdatesAvailable-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BA4B37531CD3BCB0002FBE4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SMAUpdatesAvailable-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simplymadeapps.ios.updates-available.SMAUpdatesAvailable-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA4B37431CD3BC71002FBE4D /* Build configuration list for PBXProject "SMAUpdatesAvailable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4B37441CD3BC71002FBE4D /* Debug */,
+				BA4B37451CD3BC71002FBE4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA4B37511CD3BCB0002FBE4D /* Build configuration list for PBXNativeTarget "SMAUpdatesAvailable-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4B37521CD3BCB0002FBE4D /* Debug */,
+				BA4B37531CD3BCB0002FBE4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA4B37401CD3BC71002FBE4D /* Project object */;
+}
