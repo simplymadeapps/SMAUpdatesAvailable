@@ -23,6 +23,12 @@ xcuserdata
 *.xcuserstate
 *.xcscmblueprint
 
+.DS_Store
+
+## Xcode Testing
+*.gcda
+*.gcno
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
@@ -44,7 +50,7 @@ Carthage/Build
 
 # fastlane
 #
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the 
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
