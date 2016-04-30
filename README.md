@@ -15,7 +15,7 @@ MAJOR.MINOR.PATCH
 
 For this library to work your version must be an `NSString` (which is pretty easy since Apple requires it to be this way) and your items are separated with a period. Assuming you are versioning this way, this library will work for you.
 
-#Version Types#
+##Version Types##
 You can specify in your check for udpates how precise you want your lookup to be. Maybe you only care about prompting users when you release a major or minor update, but don't want to hassle them for bug fixes.
 ``` objective-c
 SMAVersionTypeMajor // only prompts for update if major version changes
