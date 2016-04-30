@@ -21,7 +21,7 @@ This is the first iteration of this library and has all of the basic functionali
 * Copy source files to your project. Only `SMAUpdatesAvailable` and `SMAUpdateResponse` are required
 
 ##Requirements
-SMAUpdatesAvailable requires [iOS 8.0]
+SMAUpdatesAvailable requires [iOS 8.0] or later. We will be working to make this availble to as many versions as we can after proper testing.
 
 ##Credits
 SMAUpdatesAvailable was written for use in projects created by [Simply Made Apps](https://www.simpleinout.com) so we could help users update to the latest version of our apps.
