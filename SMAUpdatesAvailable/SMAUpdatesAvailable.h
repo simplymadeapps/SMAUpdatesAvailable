@@ -22,6 +22,8 @@ typedef void (^SMAUpdateCompletionBlock)(SMAUpdateResponse * _Nonnull response);
 
 + (void)checkForUpdatesWithType:(SMAVersionType)type onCompletion:(SMAUpdateCompletionBlock _Nullable)completionBlock;
 - (void)checkForUpdatesWithType:(SMAVersionType)type onCompletion:(SMAUpdateCompletionBlock _Nullable)completionBlock;
+- (nullable NSString *)bundleIdentifier;
+- (nullable NSString *)versionString;
 - (BOOL)updateAvailableForCurrentVersion:(nullable NSString *)appVersion andAppStoreVersion:(nullable NSString *)appStoreVersion withType:(SMAVersionType)type;
 - (nullable NSString *)cleanupString:(nonnull NSString *)string forType:(SMAVersionType)type;
 

@@ -37,20 +37,84 @@
     XCTAssertNotNil(update);
 }
 
+- (void)testUpdateNotAvailableWithNilValues {
+    BOOL available = [self.ua updateAvailableForCurrentVersion:nil andAppStoreVersion:nil withType:SMAVersionTypeDefault
+                      ];
+    XCTAssertFalse(available);
+}
+
 - (void)testUpdateAvailableForDefaultType {
+    NSString *appVersion = @"1.2.3.4";
+    NSString *storeVersion = @"1.2.3.5";
     
+    BOOL available = [self.ua updateAvailableForCurrentVersion:appVersion andAppStoreVersion:storeVersion withType:SMAVersionTypeDefault];
+    XCTAssertTrue(available);
+}
+
+- (void)testUpdateNotAvailableForDefaultType {
+    NSString *appVersion = @"1.2.3.4";
+    NSString *storeVersion = @"1.2.3.3";
+    
+    BOOL available = [self.ua updateAvailableForCurrentVersion:appVersion andAppStoreVersion:storeVersion withType:SMAVersionTypeDefault];
+    XCTAssertFalse(available);
 }
 
 - (void)testUpdateAvailableForMajorType {
+    NSString *appVersion = @"1.2";
+    NSString *storeVersion = @"2";
     
+    BOOL available = [self.ua updateAvailableForCurrentVersion:appVersion andAppStoreVersion:storeVersion withType:SMAVersionTypeMajor];
+    XCTAssertTrue(available);
+}
+
+- (void)testUpdateNotAvailableForMajorType {
+    NSString *appVersion = @"1.2.3.4";
+    NSString *storeVersion = @"1.3";
+    
+    BOOL available = [self.ua updateAvailableForCurrentVersion:appVersion andAppStoreVersion:storeVersion withType:SMAVersionTypeMajor];
+    XCTAssertFalse(available);
 }
 
 - (void)testUpdateAvailableForMajorMinorType {
+    NSString *appVersion = @"1.2.3.4";
+    NSString *storeVersion = @"1.3";
     
+    BOOL available = [self.ua updateAvailableForCurrentVersion:appVersion andAppStoreVersion:storeVersion withType:SMAVersionTypeMajorMinor];
+    XCTAssertTrue(available);
+}
+
+- (void)testUpdateNotAvailableForMajorMinorType {
+    NSString *appVersion = @"1.2.3.4";
+    NSString *storeVersion = @"1.2.4";
+    
+    BOOL available = [self.ua updateAvailableForCurrentVersion:appVersion andAppStoreVersion:storeVersion withType:SMAVersionTypeMajorMinor];
+    XCTAssertFalse(available);
 }
 
 - (void)testUpdateAvailableForMajorMinorBugType {
+    NSString *appVersion = @"1.2.3.4";
+    NSString *storeVersion = @"1.2.4";
     
+    BOOL available = [self.ua updateAvailableForCurrentVersion:appVersion andAppStoreVersion:storeVersion withType:SMAVersionTypeMajorMinorBug];
+    XCTAssertTrue(available);
+}
+
+- (void)testUpdateNotAvailableForMajorMinorBugType {
+    NSString *appVersion = @"1.2.3.4";
+    NSString *storeVersion = @"1.2.3.5";
+    
+    BOOL available = [self.ua updateAvailableForCurrentVersion:appVersion andAppStoreVersion:storeVersion withType:SMAVersionTypeMajorMinorBug];
+    XCTAssertFalse(available);
+}
+
+- (void)DISABLED_testBundleIdentifierReturnsString {
+    NSString *bundleId = [self.ua bundleIdentifier];
+    XCTAssertNotNil(bundleId);
+}
+
+- (void)DISABLED_testVersionStringReturnsString {
+    NSString *version = [self.ua versionString];
+    XCTAssertNotNil(version);
 }
 
 - (void)testStringCleanupWorksForDefaultType {
