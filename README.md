@@ -9,7 +9,6 @@ This library is an easy to use way to check if there are updates available for y
 This is the first iteration of this library and has all of the basic functionality to call out to Apple's lookup service and return the current data for your app. This means that your app must be approved and active in the App Store for this to work. Failsafes are built in at every step to return NO for updates available if anything were to change or not get returned correctly. This way you should be safe and comfortable putting the checks in without accidentally prompting the user to update.
 
 #Example
-##objective-c##
 ``` objective-c
 [SMAUpdatesAvailable checkForUpdatesWithType:SMAVersionTypeMajorMinorBug onCompletion:^(SMAUpdateResponse *response) {
     if (response.updateAvailable) {
