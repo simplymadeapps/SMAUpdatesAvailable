@@ -11,8 +11,23 @@ This is the first iteration of this library and has all of the basic functionali
 #Example
 ##objective-c##
 ``` objective-c
+[SMAUpdatesAvailable checkForUpdatesWithType:SMAVersionTypeMajorMinorBug onCompletion:^(SMAUpdateResponse *response) {
+    if (response.updateAvailable) {
+        // safe to prompt user to update your app
+    } else {
+        // no updates available 
+    }
+}];
+```
 
+The `SMAUpdateResponse` object contains all of the data used to check for the update. You can query the response and parse the data yourself if you like.
 
+``` objective-c
+response.appVersion // current version of your app as reported by MainBundle
+response.appStoreVersion // current version of your app as reported by Apple's lookup service (if returned)
+response.updateAvailable // BOOL to quickly determine if update is available for your app
+response.rawData // NSDictionary of the full response returned by Apple's lookup service (has a lot of Store information)
+response.error // error returned in the event of failures at any point and can be helpful for user messages if needed
 ```
 
 #Installation
