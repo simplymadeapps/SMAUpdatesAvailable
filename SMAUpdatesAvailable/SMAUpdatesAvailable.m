@@ -30,7 +30,7 @@ NSString * const lookupURL = @"http://itunes.apple.com/lookup";
         response.rawData = responseData; // return the raw response if any
         
         if ([responseData[@"resultCount"] integerValue] == 1) {
-            NSLog(@"update response data: %@", responseData);
+            //NSLog(@"update response data: %@", responseData);
             NSArray *results = responseData[@"results"];
             if (results && results.count > 0) {
                 NSString *appStoreVersion = results[0][@"version"];
@@ -44,7 +44,7 @@ NSString * const lookupURL = @"http://itunes.apple.com/lookup";
                 response.error = [NSError errorWithDomain:@"SMAUpdatesAvailable" code:2 userInfo:@{@"message": @"Unable to parse results."}];
             }
         } else {
-            NSLog(@"no response data from Apple");
+            //NSLog(@"no response data from Apple");
             response.updateAvailable = NO; // unable to safely determine if app update is available
             if (parseError) {
                 response.error = parseError;
