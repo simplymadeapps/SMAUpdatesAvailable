@@ -22,6 +22,7 @@
 		BA4B37571CD3BCF7002FBE4D /* SMAUpdateResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAUpdateResponse.m; path = SMAUpdatesAvailable/SMAUpdateResponse.m; sourceTree = "<group>"; };
 		BA4B375A1CD3BF23002FBE4D /* SMAUpdateResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAUpdateResponseTests.m; sourceTree = "<group>"; };
 		BA4B375C1CD3BF6F002FBE4D /* SMAUpdatesAvailableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAUpdatesAvailableTests.m; sourceTree = "<group>"; };
+		BA9E586A1CD8FA8A00F24527 /* SMAUpdatesAvailable.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SMAUpdatesAvailable.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 		BA4B373F1CD3BC71002FBE4D = {
 			isa = PBXGroup;
 			children = (
+				BA9E586A1CD8FA8A00F24527 /* SMAUpdatesAvailable.podspec */,
 				BA4B37461CD3BC7E002FBE4D /* SMAUpdatesAvailable */,
 				BA4B374D1CD3BCB0002FBE4D /* SMAUpdatesAvailable-Tests */,
 				BA4B374C1CD3BCB0002FBE4D /* Products */,

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SMAUpdatesAvailable'
-  s.version      = '1.0'
+  s.version      = '1.0.1'
   s.summary      = 'An easy to use library to check if there are iOS updates available for your application.'
 
   s.homepage     = 'https://github.com/simplymadeapps/SMAUpdatesAvailable'
