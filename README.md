@@ -51,6 +51,8 @@ response.error // error returned in the event of failures at any point and can b
 
 ##Requirements
 SMAUpdatesAvailable requires [iOS 8.0] or later. We will be working to make this availble to as many versions as we can after proper testing.
+* iOS 8.0 or later
+* tvOS 9.0 or later
 
 ##Credits
 SMAUpdatesAvailable was written for use in projects created by [Simply Made Apps](https://www.simpleinout.com) so we could help users update to the latest version of our apps.
