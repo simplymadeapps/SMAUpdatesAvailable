@@ -24,6 +24,14 @@ NSString * const lookupURL = @"http://itunes.apple.com/lookup";
     if (bundleIdentifier && bundleIdentifier.length > 0) {
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?bundleId=%@", lookupURL, bundleIdentifier]];
         NSData *data = [NSData dataWithContentsOfURL:url];
+        if (!data) {
+            response.updateAvailable = NO;
+            response.error = [NSError errorWithDomain:@"SMAUpdatesAvailable" code:0 userInfo:@{@"message": @"Unable to build url for current app bundle."}];
+            if (completionBlock) {
+                completionBlock(response);
+            }
+            return;
+        }
         NSError *parseError;
         NSDictionary *responseData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
         response.appVersion = [self versionString];
