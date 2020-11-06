@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/simplymadeapps/SMAUpdatesAvailable.svg?branch=master)](https://travis-ci.org/simplymadeapps/SMAUpdatesAvailable)
+[![codecov](https://codecov.io/gh/simplymadeapps/SMAUpdatesAvailable/branch/master/graph/badge.svg?token=7Q2Pc48wz7)](https://codecov.io/gh/simplymadeapps/SMAUpdatesAvailable)
+
 SMAUpdatesAvailable
 =====================================
 ![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/SMAUpdatesAvailable/badge.png)
