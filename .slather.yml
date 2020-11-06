@@ -1,0 +1,9 @@
+# .slather.yml
+
+coverage_service: cobertura_xml
+xcodeproj: SMAUpdatesAvailable.xcodeproj
+scheme: SMAUpdatesAvailable-Tests
+source_directory: SMAUpdatesAvailable/*
+output_directory: ./test-reports
+ignore:
+- "SMAUpdatesAvailableTests/*"
