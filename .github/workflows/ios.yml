@@ -3,11 +3,9 @@ name: iOS CI
 on:
   push:
     branches: [ master ]
-  pull_request:
 
 jobs:
   build:
-    name: Build and analyse default scheme using xcodebuild command
     runs-on: macos-latest
 
     steps:
