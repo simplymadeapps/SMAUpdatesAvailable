@@ -1,11 +1,12 @@
 name: iOS CI
 
 on:
+  pull_request:
   push:
     branches: [ master ]
 
 jobs:
-  build:
+  test:
     runs-on: macos-latest
 
     steps:
