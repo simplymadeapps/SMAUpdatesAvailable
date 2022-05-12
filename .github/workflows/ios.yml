@@ -12,12 +12,5 @@ jobs:
     runs-on: macos-latest
 
     steps:
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Slather
-        run: gem install slather
-      - name: iOS 11 Testing
-        run: xcodebuild CODE_SIGNING_REQUIRED=NO CODE_SIGNING_IDENTITY= PROVISIONING_PROFILE= GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES -destination "platform=iOS Simulator,name=iPhone X,OS=11.4" -scheme "SMAUpdatesAvailable-Tests" test
-      - name: Run Slather
-        run: slather
-      - name: Verify Coverage
-        run: curl -s https://codecov.io/bash | bash -s - -v -f test-reports/cobertura.xml -X coveragepy -X gcov -X xcode
