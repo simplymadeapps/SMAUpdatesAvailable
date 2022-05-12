@@ -1,30 +1,33 @@
-name: Xcode - Build and Analyze
+name: iOS CI
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
+  push:
     branches: [ master ]
 
 jobs:
-  build:
-    name: Build and analyse default scheme using xcodebuild command
+  test:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout
         uses: actions/checkout@v3
-      - name: Set Default Scheme
-        run: |
-          scheme_list=$(xcodebuild -list -json | tr -d "\n")
-          default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
-          echo $default | cat >default
-          echo Using default scheme: $default
-      - name: Build
-        env:
-          scheme: ${{ 'default' }}
-        run: |
-          if [ $scheme = default ]; then scheme=$(cat default); fi
-          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
-          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
-          xcodebuild clean build analyze -scheme "$scheme" -"$filetype_parameter" "$file_to_build" | xcpretty && exit ${PIPESTATUS[0]}
+      - name: Install Slather
+        run: gem install slather
+      - name: iOS 11 Testing
+        run: xcodebuild CODE_SIGNING_REQUIRED=NO CODE_SIGNING_IDENTITY= PROVISIONING_PROFILE= GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES -destination "platform=iOS Simulator,name=iPhone X,OS=11.4" -scheme "SMAUpdatesAvailable-Tests" test
+      - name: Run Slather
+        run: slather
+      - name: Verify Coverage
+        run: curl -s https://codecov.io/bash | bash -s - -v -f test-reports/cobertura.xml -X coveragepy -X gcov -X xcode
+      - name: iOS 12 Testing
+        run: xcodebuild CODE_SIGNING_REQUIRED=NO CODE_SIGNING_IDENTITY= PROVISIONING_PROFILE= GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES -destination "platform=iOS Simulator,name=iPhone 8,OS=12.4" -scheme "SMAUpdatesAvailable-Tests" test
+      - name: Run Slather
+        run: slather
+      - name: Verify Coverage
+        run: curl -s https://codecov.io/bash | bash -s - -v -f test-reports/cobertura.xml -X coveragepy -X gcov -X xcode
+      - name: iOS 13 Testing
+        run: xcodebuild CODE_SIGNING_REQUIRED=NO CODE_SIGNING_IDENTITY= PROVISIONING_PROFILE= GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" -scheme "SMAUpdatesAvailable-Tests" test
+      - name: Run Slather
+        run: slather
+      - name: Verify Coverage
+        run: curl -s https://codecov.io/bash | bash -s - -v -f test-reports/cobertura.xml -X coveragepy -X gcov -X xcode
