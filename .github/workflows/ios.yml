@@ -1,12 +1,14 @@
 name: iOS CI
 
 on:
-  pull_request:
   push:
     branches: [ master ]
 
+env:
+  DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer
+
 jobs:
-  test:
+  build:
     runs-on: macos-latest
 
     steps:
