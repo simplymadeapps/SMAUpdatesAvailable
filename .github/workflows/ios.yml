@@ -5,6 +5,9 @@ on:
   push:
     branches: [ master ]
 
+env:
+  DEVELOPER_DIR: /Applications/Xcode_10.3.app/Contents/Developer
+
 jobs:
   build:
     runs-on: macos-10.14
