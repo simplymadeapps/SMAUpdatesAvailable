@@ -19,7 +19,7 @@ jobs:
         run: gem install slather
 
       - name: iOS 15 Testing
-        run: xcodebuild CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES -destination "platform=iOS Simulator,name=iPhone 13,OS=15.4" -scheme "SMAUpdatesAvailable-Tests" test
+        run: xcodebuild CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES -destination "platform=iOS Simulator,name=iPhone 13,OS=15.2" -scheme "SMAUpdatesAvailable-Tests" test
 
       - name: Run Slather
         run: slather
