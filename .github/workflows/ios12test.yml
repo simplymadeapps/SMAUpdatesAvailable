@@ -20,7 +20,7 @@ jobs:
         run: gem install slather
 
       - name: iOS 12 Testing
-        run: xcodebuild CODE_SIGNING_REQUIRED=NO CODE_SIGNING_IDENTITY= PROVISIONING_PROFILE= GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES -destination "platform=iOS Simulator,name=iPhone 8,OS=12.4" -scheme "SMAUpdatesAvailable-Tests" test
+        run: xcodebuild CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 8,OS=12.4" -scheme "SMAUpdatesAvailable-Tests" test
 
       - name: Run Slather
         run: slather
