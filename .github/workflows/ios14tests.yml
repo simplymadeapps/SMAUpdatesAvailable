@@ -1,4 +1,4 @@
-name: iOS 14 Tests
+name: iOS 14 Test
 
 on:
   pull_request:
